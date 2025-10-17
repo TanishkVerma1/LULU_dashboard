@@ -1,7 +1,0 @@
-/* Basic corporate look */
-.kpi-card { 
-    border: 1px solid #e6e6e6; padding: 14px; border-radius: 12px; 
-    background: #fafafa; text-align:center; 
-}
-.kpi-title { font-size: 0.85rem; color:#666; margin-bottom: 4px;}
-.kpi-value { font-size: 1.4rem; font-weight: 700; color:#222;}
