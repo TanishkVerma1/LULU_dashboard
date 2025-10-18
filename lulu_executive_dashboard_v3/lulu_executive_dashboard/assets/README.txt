@@ -1,0 +1,1 @@
+Place your corporate logo as logo.png in this folder (transparent background recommended).
