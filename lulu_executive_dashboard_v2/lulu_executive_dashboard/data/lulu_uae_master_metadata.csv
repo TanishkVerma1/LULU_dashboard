@@ -1,0 +1,36 @@
+column,dtype,meaning
+order_id,string,Unique transaction id (synthetic).
+order_datetime,datetime,UTC-naive timestamp of purchase.
+channel,category,"Transaction channel: In-Store POS, Online App, Web."
+store_format,category,"Store format: Hypermarket, Express, Web DC."
+city,category,UAE city.
+city_zone,category,Zone/neighborhood within city.
+department,category,"Top-level business dept: Grocery, Electronics, Fashion, Home & Living, Pharmacy, Bakery Counter."
+category,category,"Department-specific category (e.g., Fresh Produce, Mobiles, Menswear)."
+brand,category,Brand label relevant to department.
+sku_id,string,Synthetic SKU identifier.
+base_unit_price_aed,float,Regular unit price before discount.
+discount_aed,float,Discount applied per unit.
+unit_price_after_discount_aed,float,Final unit price after discount.
+quantity,int,Units purchased for the SKU line.
+line_value_aed,float,Final value for the line (unit_price_after_discount_aed × quantity).
+promo_used,int (0/1),1 if any discount was applied; else 0.
+promo_code_type,category,"Percent, Flat, BOGO, FreeDelivery (when promo_used=1)."
+ad_channel,category,Attribution/marketing channel.
+campaign,category,Campaign tag.
+payment_method,category,"Card, Cash, Wallet, Apple Pay, Google Pay."
+device_type,category,"iOS, Android, Desktop (for online) or N/A for in-store."
+delivery_type,category,"Carryout, Same-Day, Next-Day."
+basket_size_items,int,Customer-level basket size estimate for the trip.
+returned,int (0/1),1 if item was returned.
+return_reason,category,"If returned, reason provided."
+return_value_aed,float,Refund value processed for the line (0 if not returned).
+stock_out_flag,int (0/1),1 indicates SKU experienced stock-out event at time of purchase.
+loyalty_member,int (0/1),1 if customer is in loyalty program.
+user_id,string,Synthetic customer id (non-PII).
+age,int,Estimated age of customer.
+gender,category,Self-reported or unspecified.
+nationality_group,category,Broad nationality group for segmentation.
+hour_of_day,int,Hour extracted from order_datetime.
+day_of_week,category,Day name extracted from order_datetime.
+order_month,string (YYYY-MM),Month key for cohort/time-series charts.
